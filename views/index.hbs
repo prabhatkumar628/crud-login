@@ -1,0 +1,59 @@
+{{>header}}
+<title>Employee Data</title>
+{{>navbar}}
+<div class="mid-section bg-color2 p-2">
+    <div class="bg-success">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                    <h5 class="text-center fs-4 py-3 text-light">Employee records section</h5>
+                </div>
+
+                <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                    <form class="d-flex" role="search" action="/search">
+                        <input class="form-control me-2" type="search" value="{{searchQurey.search}}" name="search" placeholder="Search"
+                            aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="table table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Designation</th>
+                    <th>Salary</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {{#each data}}
+                <tr>
+                    <td>{{name}}</td>
+                    <td>{{email}}</td>
+                    <td>{{phone}}</td>
+                    <td>{{designation}}</td>
+                    <td>{{salary}}</td>
+                    <td>{{city}}</td>
+                    <td>{{state}}</td>
+                    <td class="text-center"><a href="/edit/{{_id}}"><span
+                                class="material-symbols-outlined">edit</span></a></td>
+                    <td class="text-center"><a href="/delete/{{_id}}"><span
+                                class="material-symbols-outlined">delete_forever</span></a></td>
+                </tr>
+                {{/each}}
+            </tbody>
+
+        </table>
+    </div>
+</div>
+{{>footer}}

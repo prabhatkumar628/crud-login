@@ -1,0 +1,83 @@
+</head>
+
+<body>
+  <header class=" p-2">
+    <nav class=" container">
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="user-box rounded-circle">
+          <img style="border: 1px solid white; " class="w-100 nav-logo h-100 rounded-circle" alt=""
+            src="{{user.avatar}}">
+
+        </div>
+        <div class="ms-2">
+          <a class="navbar-brand fw-medium fs-4" style="color: #f0f6fc;" href="/">Employee DATA</a>
+        </div>
+      </div>
+
+      <div class="d-flex flex-row-reverse">
+        <label class="bar-box bg-transparent user-box-t d-flex justify-content-center align-items-center"
+          for="toggle"><i style="color: #9198a1;" class="fs-3 fa-solid fa-bars"></i></label>
+        <input class="d-none" type="checkbox" id="toggle">
+
+        <div class="nav-box d-flex">
+          <ul>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/add-data">Add Data</a>
+            </li>
+
+            <li class="rounded-5">
+              <a href="/users/logout">Logout -></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  {{!-- <header>
+    <nav class="navbar navbar-expand-lg bg-color">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active text-light" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="/users/add">add</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search" action="/search">
+            <input class="form-control me-2" type="search" name="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header> --}}

@@ -1,0 +1,70 @@
+{{>header}}
+<title>Update Employee Data</title>
+{{>navbar}}
+<div class="mid-section bg-login container-fluid p-5">
+    <h5 class="bg-success text-center py-3 text-light">Update Employee Record</h5>
+    <form action="" method="post">
+        <div class="row">
+            <div class="col-md-12 d-flex flex-column">
+                <label class="text-light" for="">Name*</label>
+                <input value="{{data.name}}" class="form-control border-3 {{#if errorMessage.name}} border-danger {{/if}}" type="text" name="name" placeholder="Full Name">
+                {{#if errorMessage.name}} 
+                <p class="text-danger">{{errorMessage.name}}</p>
+                {{/if}}
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-6 d-flex flex-column">
+                <label class="text-light" for="">Email*</label>
+                <input class="form-control border-3 {{#if errorMessage.email}} border-danger {{/if}}" value="{{data.email}}" type="email" name="email" placeholder="Email">
+                {{#if errorMessage.email}} 
+                <p class="text-danger">{{errorMessage.email}}</p>
+                {{/if}}
+            </div>
+
+            <div class="col-md-6 d-flex flex-column">
+                <label class="text-light" for="">Phone*</label>
+                <input class="form-control border-3 {{#if errorMessage.phone}} border-danger {{/if}}" value="{{data.phone}}" type="text" name="phone" placeholder="Phone no">
+                {{#if errorMessage.phone}} 
+                <p class="text-danger">{{errorMessage.phone}}</p>
+                {{/if}}
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-6 d-flex flex-column">
+                <label class="text-light" for="">Designation*</label>
+                <input class="form-control border-3 {{#if errorMessage.designation}} border-danger {{/if}}" value="{{data.designation}}" type="text" name="designation" placeholder="Designation">
+                {{#if errorMessage.designation}} 
+                <p class="text-danger">{{errorMessage.designation}}</p>
+                {{/if}}
+            </div>
+
+            <div class="col-md-6 d-flex flex-column">
+                <label class="text-light" for="">Salary*</label>
+                <input class="form-control border-3 {{#if errorMessage.salary}} border-danger {{/if}}" value="{{data.salary}}" type="number" name="salary" placeholder="Salary">
+                {{#if errorMessage.salary}} 
+                <p class="text-danger">{{errorMessage.salary}}</p>
+                {{/if}}
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-6 d-flex flex-column">
+                <label class="text-light" for="">city</label>
+                <input class="form-control" type="text" value="{{data.city}}" name="city" placeholder="city">
+            </div>
+
+            <div class="col-md-6 d-flex flex-column">
+                <label class="text-light" for="">state</label>
+                <input class="form-control" type="text" value="{{data.state}}" name="state" placeholder="state">
+            </div>
+        </div>
+
+        <div class="text-center mt-2">
+            <button class="btn btn-danger" type="submit">Update</button>
+        </div>
+    </form>
+</div>
+{{>footer}}

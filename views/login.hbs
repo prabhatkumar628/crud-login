@@ -1,0 +1,48 @@
+{{>header}}
+<title>Login</title>
+{{!-- {{>navbar}} --}}
+<div class=" bg-login container-fluid pt-5 p-sm-2 p-md-5 ">
+    <div class="login-box d-flex flex-column justify-content-between align-items-center m-auto">
+        <div class="login-icon">
+            <img class="w-auto h-auto"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOtu74pEiq7ofeQeTsco0migV16zZoBwSlGg&s"
+                alt="">
+        </div>
+        <h3 class="text-light fw-light mt-4">Sign in to Employee Data</h3>
+
+        <form action="/users/login" method="post">
+            <div class="login-form-box mt-3">
+                <label class="text-light" for="">Username or email address</label>
+                <input value="{{data.usernameOrEmail}}" style="border: 1px solid white;" class="rounded-2 p-2 text-light mt-2 w-100" type="text"
+                    placeholder="User or Email" name="usernameOrEmail" id="">
+                {{#if errorMessage.usernameOrEmail}}
+                <p class="text-danger">{{errorMessage.usernameOrEmail}}</p>
+                {{/if}}
+                {{#if errorMessage.InvalidUser}}
+                <p class="text-danger">{{errorMessage.InvalidUser}}</p>
+                {{/if}}
+
+                <div class="d-flex justify-content-between mt-4">
+                    <label class="text-light" for="">Password</label>
+                    <label class="text-light" for="">
+                        <a style="color: #4493f8;" href="">Forgot password?</a>
+                    </label>
+                </div>
+                <input value="{{data.password}}" style="border: 1px solid white;" class="rounded-2 p-2 text-light mt-1 w-100" type="text"
+                    placeholder="Password" name="password" id="">
+                {{#if errorMessage.password}}
+                <p class="text-danger">{{errorMessage.password}}</p>
+                {{/if}}
+                <button type="submit" class="border-0 w-100 mt-3 py-1 rounded-3">Sign in</button>
+            </div>
+        </form>
+
+        <div class="login-form-box mt-3">
+            <p class="text-light p-0 m-0" for="">New to EmployeeData? <span><a href="/users/register">Create an
+                        account</a></span></p>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,275 @@
+.mid-section {
+    min-height: 77vh;
+    background-color: rgb(7, 124, 124);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bg-color {
+    background-color: rgb(163, 0, 0);
+}
+
+header {
+    background-color: #010409;
+    border-bottom: 1px solid rgb(61, 68, 77);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: auto;
+}
+
+nav ul li {
+    border: 1px solid rgb(61, 68, 77);
+    line-height: 30px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    padding: 0 5px;
+
+    &:hover {
+        background-color: #252c34;
+    }
+}
+
+nav ul li a {
+    text-decoration: none;
+    min-width: fit-content;
+    color: rgb(240, 246, 252);
+}
+
+.nav-box {
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    min-height: 100vh;
+    width: 220px;
+    background-color: #010409;
+    border-right: 1px solid rgb(61, 68, 77);
+    display: flex;
+    justify-content: center;
+    margin-left: -230px;
+    transition: margin-left 0.5s;
+}
+
+.user-box {
+    min-height: 40px;
+    max-width: 40px;
+    min-width: 40px;
+    max-height: 40px;
+    background-color: blanchedalmond;
+}
+.nav-logo{
+    min-width: 40px;
+    min-height: 40px;
+    max-width: 40px;
+    max-width: 40px;
+}
+
+.bar-box {
+    min-height: 40px;
+    min-width: 40px;
+    border: 1px solid #3d444d;
+    border-radius: 5px;
+}
+
+#toggle:checked~.nav-box {
+    margin-left: 0;
+    transition: 0.3s;
+}
+
+@media (min-width: 576px) {
+    .nav-box {
+        position: fixed;
+        left: 0;
+        top: 0;
+        min-height: 100vh;
+        width: 220px;
+        margin-left: -230px;
+        transition: margin-left 0.3s;
+    }
+}
+
+@media (min-width: 768px) {
+    .nav-box {
+        position: static;
+        min-height: auto;
+        width: max-content;
+        background: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0;
+        transition: none;
+        border: 0;
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: 5;
+    }
+
+    nav ul li {
+        margin-bottom: 0px;
+        margin-right: 8px;
+    }
+
+    .bar-box {
+        min-height: 0;
+        min-width: 0;
+        border: none;
+        border-radius: 0;
+        display: none !important;
+        visibility: hidden;
+    }
+
+}
+
+.login-box {
+    width: 380px;
+}
+
+.bg-login {
+    background-color: #0d1117;
+    min-height: 100vh !important;
+}
+.bg-color2{
+    background-color: #0d1117;
+
+}
+
+.login-icon {
+    min-width: 60px;
+    min-height: 60px;
+    border-radius: 50%;
+    background-color: white;
+
+}
+
+.login-icon img {
+    max-width: 60px;
+    min-width: 60px;
+    max-height: 60px;
+    min-height: 60px;
+    border-radius: 50%;
+    border: 1px solid white;
+
+}
+
+.login-form-box {
+    padding: 12px;
+    background-color: rgb(21, 27, 35);
+    border: 1px solid rgb(49, 56, 64);
+    border-radius: 8px;
+    width: 340px;
+}
+
+.register-form-box {
+    padding: 12px;
+    background-color: rgb(21, 27, 35);
+    border: 1px solid rgb(49, 56, 64);
+    border-radius: 8px;
+    width: 340px;
+}
+
+.login-form-box a {
+    text-decoration: none;
+}
+
+.login-form-box input,
+input:active {
+    background-color: transparent;
+}
+
+.register-box {
+    width: 380px;
+}
+
+@media (min-width: 320px) {
+    .login-box {
+        width: 300px;
+    }
+
+    .login-form-box {
+        padding: 12px;
+        background-color: rgb(21, 27, 35);
+        border: 1px solid rgb(49, 56, 64);
+        border-radius: 8px;
+        width: 300px;
+    }
+
+}
+
+@media (min-width: 320px) {
+    .form-text{
+        font-size: 18px !important;
+    }
+    .register-form-box {
+        padding: 12px;
+        background-color: rgb(21, 27, 35);
+        border: 1px solid rgb(49, 56, 64);
+        border-radius: 8px;
+        width: 300px;
+    }
+
+    .login-form-box a {
+        text-decoration: none;
+    }
+
+    .login-form-box input,
+    input:active {
+        background-color: transparent;
+    }
+
+    .register-box {
+        width: 300px;
+
+    }
+
+}
+
+
+@media (min-width: 768px) {
+    .register-box {
+        width: 500px;
+    }
+
+    .register-form-box {
+        padding: 12px;
+        background-color: rgb(21, 27, 35);
+        border: 1px solid rgb(49, 56, 64);
+        border-radius: 8px;
+        width: 480px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+body {
+    background-color: rgb(1, 4, 9);
+
+}
