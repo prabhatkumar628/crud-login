@@ -38,7 +38,7 @@ const home = asynHandler(async (req, res) => {
     }
     res.render("index", {
         user: {
-            avatar: user.avatar
+            avatar: user?.avatar || ""
         }, data
 
     })
@@ -178,7 +178,7 @@ const searchData = asynHandler(async (req, res) => {
 
         res.render("index", {
             user: {
-                avatar: user.avatar
+                avatar: user?.avatar || ""
             },
             data,
             searchQurey: {

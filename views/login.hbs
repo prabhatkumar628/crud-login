@@ -2,6 +2,8 @@
 <title>Login</title>
 {{!-- {{>navbar}} --}}
 <div class=" bg-login container-fluid pt-5 p-sm-2 p-md-5 ">
+    <h6 class="fw-light text-danger text-center mt-4">This website under development, <br/>don't enter your confidential data, <br/><span class="text-success">Thanks you for visiting our website.</span></h6>
+
     <div class="login-box d-flex flex-column justify-content-between align-items-center m-auto">
         <div class="login-icon">
             <img class="w-auto h-auto"
@@ -13,8 +15,9 @@
         <form action="/users/login" method="post">
             <div class="login-form-box mt-3">
                 <label class="text-light" for="">Username or email address</label>
-                <input value="{{data.usernameOrEmail}}" style="border: 1px solid white;" class="rounded-2 p-2 text-light mt-2 w-100" type="text"
-                    placeholder="User or Email" name="usernameOrEmail" id="">
+                <input value="{{data.usernameOrEmail}}" style="border: 1px solid white;"
+                    class="rounded-2 p-2 text-light mt-2 w-100" type="text" placeholder="User or Email"
+                    name="usernameOrEmail" id="">
                 {{#if errorMessage.usernameOrEmail}}
                 <p class="text-danger">{{errorMessage.usernameOrEmail}}</p>
                 {{/if}}
@@ -28,8 +31,9 @@
                         <a style="color: #4493f8;" href="">Forgot password?</a>
                     </label>
                 </div>
-                <input value="{{data.password}}" style="border: 1px solid white;" class="rounded-2 p-2 text-light mt-1 w-100" type="text"
-                    placeholder="Password" name="password" id="">
+                <input value="{{data.password}}" style="border: 1px solid white;"
+                    class="rounded-2 p-2 text-light mt-1 w-100" type="password" placeholder="Password" name="password"
+                    id="">
                 {{#if errorMessage.password}}
                 <p class="text-danger">{{errorMessage.password}}</p>
                 {{/if}}
